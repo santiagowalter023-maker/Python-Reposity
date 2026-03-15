@@ -1,0 +1,162 @@
+import tkinter as tk
+from tkinter import messagebox
+
+ventana = tk.Tk()
+ventana.title("Menú Heladería")
+ventana.geometry("400x400")
+ventana.configure(bg="blue")
+
+
+##1.SECCIÓN TAMAÑO
+opcion_t = tk.IntVar()
+
+
+#FUNCION
+def mostrar_sabores():
+    sabores.pack(pady=10)
+    boton_final.pack(pady=20)
+    boton_siguiente.pack_forget()
+
+
+#FUNCION PARA CALCULAR PRECIO
+def calcularprecio(bochas):
+
+    if bochas == 1:
+        precios = 700
+        return precios
+
+    if bochas == 2:
+        precios = 1200
+        return precios
+
+    if bochas == 3:
+        precios = 1600
+        return precios
+
+
+#FUNCION FINAL
+def terminar():
+
+    saboras = []
+
+    if limonA.get() == 1:
+        saboras.append("Limon")
+
+    if frutillA.get() == 1:
+        saboras.append("Frutilla")
+
+    if ananaA.get() == 1:
+        saboras.append("Anana")
+
+    if nranjaA.get() == 1:
+        saboras.append("Naranja")
+
+    if vainillA.get() == 1:
+        saboras.append("Vainilla")
+
+    if ddelecheA.get() == 1:
+        saboras.append("DulceDeLeche")
+
+    if tramntanA.get() == 1:
+        saboras.append("Tramontana")
+        
+    if granizadA.get() == 1:
+        saboras.append("MentaGranizada")
+
+
+    bochas = opcion_t.get()
+
+    if bochas == 0:
+        messagebox.showerror(
+        "",
+        ""    
+        "Numero incorrecto de bochas"                   
+        )
+        return
+
+    if len(saboras) > bochas:
+        messagebox.showinfo(
+        "",
+        ""
+        "Elejiste mas sabores que bochas"
+        )
+        return
+
+    precio = calcularprecio(bochas)
+
+    messagebox.showinfo(
+    "Resumen del pedido",
+    "Bochas: " + str(bochas)+ 
+    "Sabores: " + str(saboras)+ 
+    "Precio: $" + str(precio)
+)
+    ventana.destroy()
+
+
+lbl_paso1 = tk.Label(ventana, text="1. ELIGE EL TAMAÑO",bg= "lightblue")
+lbl_paso1.pack(pady=50)
+
+
+bocha1 = tk.Radiobutton(ventana, text="1 Bocha", variable=opcion_t, value=1)
+bocha1.pack()
+
+bocha2 = tk.Radiobutton(ventana, text="2 Bochas", variable=opcion_t, value=2)
+bocha2.pack()
+
+bocha14 = tk.Radiobutton(ventana, text="1/4 Kilo", variable=opcion_t, value=3)
+bocha14.pack()
+
+
+boton_siguiente = tk.Button(ventana,text="Elegir sabores ",command=mostrar_sabores,bg="red")
+boton_siguiente.pack(pady=50)
+
+
+# SABORES
+sabores = tk.Frame(ventana)
+
+limonA    = tk.IntVar()
+frutillA  = tk.IntVar()
+ananaA    = tk.IntVar()
+nranjaA   = tk.IntVar()
+vainillA  = tk.IntVar()
+ddelecheA = tk.IntVar()
+tramntanA = tk.IntVar()
+granizadA = tk.IntVar()
+
+#Botones de sabores
+#Sabores 
+
+limon2       = tk.Checkbutton(sabores, text="Limon", variable=limonA)
+limon2.grid(row= 1)
+
+frutilla2    = tk.Checkbutton(sabores, text="Frutilla", variable=frutillA)
+frutilla2.grid(row= 1)
+
+#
+
+anana2       = tk.Checkbutton(sabores, text="Anana", variable=ananaA)
+anana2.grid(row= 3)
+
+naraja2      = tk.Checkbutton(sabores, text="Naranja", variable=nranjaA)
+naraja2.grid(row= 3)
+
+#Sabores a la crema
+vainilla2    = tk.Checkbutton(sabores, text="Vainilla", variable=vainillA)
+vainilla2.grid(row= 1, column =2)
+
+dulcelech2   = tk.Checkbutton(sabores, text="Dulce de leche", variable=ddelecheA)
+dulcelech2.grid(row= 1,column =2)
+
+#
+
+tramontana2  = tk.Checkbutton(sabores, text="Tramontana", variable=tramntanA)
+tramontana2.grid(row= 3,column = 2)
+
+granizada2   = tk.Checkbutton(sabores, text="Menta Granizada", variable=granizadA)
+granizada2.grid(row= 3,column = 2)
+
+#BOTÓN FINAL
+boton_final = tk.Radiobutton(ventana, text="CONFIRMAR PEDIDO", command=terminar)
+boton_final.pack(pady= 50)
+
+ventana.mainloop()
