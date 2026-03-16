@@ -1,11 +1,14 @@
 import tkinter as tk
 from tkinter import messagebox
 
+#CONFIGURACION DE VENTANA
+
 ventana = tk.Tk()
 ventana.title("Menú Heladería")
 ventana.geometry("400x400")
 ventana.configure(bg="blue")
 
+#Archivo Definicion
 
 ##1.SECCIÓN TAMAÑO
 opcion_t = tk.IntVar()
@@ -126,42 +129,43 @@ granizadA = tk.IntVar()
 #Botones de sabores
 #Sabores 
 
+etiqueta01= tk.Label(sabores, text= "Sabores al Agua")
+etiqueta01.grid(row= 0,column=0)
+
 limon2       = tk.Checkbutton(sabores, text="Limon", variable=limonA)
-limon2.grid(row= 1)
+limon2.grid(row= 1, column= 0)
 
 frutilla2    = tk.Checkbutton(sabores, text="Frutilla", variable=frutillA)
-frutilla2.grid(row= 1)
+frutilla2.grid(row= 2, column= 0)
 
 #
 
 anana2       = tk.Checkbutton(sabores, text="Anana", variable=ananaA)
-anana2.grid(row= 3)
+anana2.grid(row= 3, column=0)
 
 naraja2      = tk.Checkbutton(sabores, text="Naranja", variable=nranjaA)
-naraja2.grid(row= 3)
+naraja2.grid(row= 4, column=0)
 
 #Sabores a la crema
+etiqueta02 = tk.Label(sabores, text= "Sabores a la Crema")
+etiqueta02.grid(row=0, column= 1)
+
 vainilla2    = tk.Checkbutton(sabores, text="Vainilla", variable=vainillA)
-vainilla2.grid(row= 1, column =2)
+vainilla2.grid(row= 1, column =1)
 
 dulcelech2   = tk.Checkbutton(sabores, text="Dulce de leche", variable=ddelecheA)
-dulcelech2.grid(row= 1,column =2)
-god = 5667777
-messi02 = 23
-messi = god
-
-
+dulcelech2.grid(row= 2,column =1)
 
 #
 
 tramontana2  = tk.Checkbutton(sabores, text="Tramontana", variable=tramntanA)
-tramontana2.grid(row= 3,column = 2)
+tramontana2.grid(row= 3,column = 1)
 
 granizada2   = tk.Checkbutton(sabores, text="Menta Granizada", variable=granizadA)
-granizada2.grid(row= 3,column = 2)
+granizada2.grid(row= 4,column = 1)
 
 #BOTÓN FINAL
-boton_final = tk.Radiobutton(ventana, text="CONFIRMAR PEDIDO", command=terminar)
+boton_final = tk.Button(ventana, text="CONFIRMAR PEDIDO", command=terminar)
 boton_final.pack(pady= 50)
 
 ventana.mainloop()
