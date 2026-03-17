@@ -10,6 +10,7 @@ ventana.configure(bg="blue")
 
 #Archivo Definicion
 
+
 ##1.SECCIÓN TAMAÑO
 opcion_t = tk.IntVar()
 
@@ -69,6 +70,22 @@ def terminar():
 
     bochas = opcion_t.get()
 
+    precio = calcularprecio(bochas)
+
+    #Deficion archivo
+    RUTA  = "ticked.txt"
+    ABRIR = open(RUTA, "a")
+
+
+    ABRIR.write(    "Resumen del pedido \n")
+    ABRIR.write(    "Bochas: " + str(bochas)+ "\n") 
+    ABRIR.write(    "Sabores: " + str(saboras)+ "\n") 
+    ABRIR.write(    "Precio: $" + str(precio)+ "\n")
+    ABRIR.write("_____________________ \n")
+
+    ABRIR.close()
+
+
     if bochas == 0:
         messagebox.showerror(
         "",
@@ -84,16 +101,16 @@ def terminar():
         "Elejiste mas sabores que bochas"
         )
         return
-
+    
     precio = calcularprecio(bochas)
 
-    messagebox.showinfo(
-    "Resumen del pedido",
-    "Bochas: " + str(bochas)+ 
-    "Sabores: " + str(saboras)+ 
-    "Precio: $" + str(precio)
-)
+
+    #Destruye ventana y cierra
     ventana.destroy()
+
+    
+
+
 
 
 lbl_paso1 = tk.Label(ventana, text="1. ELIGE EL TAMAÑO",bg= "lightblue")
@@ -167,5 +184,6 @@ granizada2.grid(row= 4,column = 1)
 #BOTÓN FINAL
 boton_final = tk.Button(ventana, text="CONFIRMAR PEDIDO", command=terminar)
 boton_final.pack(pady= 50)
+
 
 ventana.mainloop()

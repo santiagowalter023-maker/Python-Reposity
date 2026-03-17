@@ -1,0 +1,59 @@
+Resumen del pedido 
+Bochas: 1
+Sabores: ['Limon', 'Frutilla']
+Resumen del pedido 
+Bochas: 1
+Sabores: ['Limon', 'Frutilla']
+Resumen del pedido 
+Bochas: 1
+Sabores: ['Limon']
+Resumen del pedido 
+Bochas: 1
+Sabores: ['Limon']
+Precio: $700
+_____________________ 
+Resumen del pedido 
+Bochas: 1
+Sabores: ['Limon']
+Precio: $700
+_____________________ 
+Resumen del pedido 
+Bochas: 1
+Sabores: ['Limon', 'Vainilla']
+Precio: $700
+_____________________ 
+Resumen del pedido 
+Bochas: 1
+Sabores: ['Limon']
+Precio: $700
+_____________________ 
+Resumen del pedido 
+Bochas: 1
+Sabores: ['Limon', 'Vainilla']
+Precio: $700
+_____________________ 
+Resumen del pedido 
+Bochas: 1
+Sabores: ['Limon', 'Frutilla']
+Precio: $700
+_____________________ 
+Resumen del pedido 
+Bochas: 1
+Sabores: ['Limon']
+Precio: $700
+_____________________ 
+Resumen del pedido 
+Bochas: 3
+Sabores: ['Limon', 'Frutilla', 'Vainilla', 'DulceDeLeche']
+Precio: $1600
+_____________________ 
+Resumen del pedido 
+Bochas: 3
+Sabores: ['Limon', 'Frutilla', 'Vainilla']
+Precio: $1600
+_____________________ 
+Resumen del pedido 
+Bochas: 1
+Sabores: ['Frutilla']
+Precio: $700
+_____________________ 
