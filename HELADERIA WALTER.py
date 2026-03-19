@@ -6,7 +6,7 @@ from tkinter import messagebox
 ventana = tk.Tk()
 ventana.title("Menú Heladería")
 ventana.geometry("400x400")
-ventana.configure(bg="blue")
+ventana.configure(bg="green")
 
 #Archivo Definicion
 
@@ -113,7 +113,7 @@ def terminar():
 
 
 
-lbl_paso1 = tk.Label(ventana, text="1. ELIGE EL TAMAÑO",bg= "lightblue")
+lbl_paso1 = tk.Label(ventana, text="1. ELIGE EL TAMAÑO",bg= "yellow")
 lbl_paso1.pack(pady=50)
 
 
