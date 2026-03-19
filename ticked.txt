@@ -33,3 +33,8 @@ Bochas: 1
 Sabores: ['Limon']
 Precio: $700
 _____________________ 
+Resumen del pedido 
+Bochas: 3
+Sabores: ['Limon', 'Frutilla', 'Anana']
+Precio: $1600
+_____________________ 
